@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.2.1",
     "byte-size": "^8.1.0",
     "idb": "^7.1.1",
     "qs": "^6.11.0",
