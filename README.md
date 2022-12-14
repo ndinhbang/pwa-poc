@@ -1,8 +1,9 @@
 # pwa-poc
 
+```
 cd frontend
-
-```pnpm install``` 
+pnpm install
+``` 
 
 (or ```npm install``` if you dont have pnpm)
 
