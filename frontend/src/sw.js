@@ -16,8 +16,12 @@ clientsClaim()
 
 const bgSyncPlugin = new BackgroundSyncPlugin('offline-todo-queue');
 
+const matchCb = ({url, request, event}) => {
+  return url.pathname.startsWith('/api/v1/todos');
+};
+
 registerRoute(
-  /.*\/todos\/.*/,
+  matchCb,
   new NetworkOnly({
     plugins: [bgSyncPlugin],
   }),
@@ -25,7 +29,7 @@ registerRoute(
 );
 
 registerRoute(
-  /.*\/todos\/.*/,
+  matchCb,
   new NetworkOnly({
     plugins: [bgSyncPlugin],
   }),
@@ -33,7 +37,7 @@ registerRoute(
 );
 
 registerRoute(
-  /.*\/todos\/.*/,
+  matchCb,
   new NetworkOnly({
     plugins: [bgSyncPlugin],
   }),
